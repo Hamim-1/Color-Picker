@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="fixedColor()">
+    <main>
+        <section id="section1">
+            <h4>Display color</h4>
+            <span onclick="GenerateColor()">Random color</span>
+        </section>
+
+        <section id="section2"></section>
+
+        <section id="section3">
+            <h5>Change & Copy Color</h5>
+            <div><span id="saveBtn">Save</span> <span id="copyBtn">Copy<span></div>
+        </section>
+
+        <section id="section4">
+            <span>Select Copy Mode</span>
+            <div>
+                <input type="radio" name="color" id="hexColorMode" checked>
+                <label for="hexColorMode">Hex</label>
+                <input type="radio" name="color" id="rgbColorMode">
+                <label for="rgbColorMode">RGB</label>
+            </div>
+        </section>
+
+        <section id="section5">
+            <span id="span1">Hex</span>
+            <span id="span2">RGB</span>
+        </section>
+
+        <section id="section6">
+            <div>
+                <span>#</span><input type="text" value="865fa0" id="hexColor">
+            </div>
+            <div>
+                <input type="text" readonly value="rgb(134,95,160)" id="rgbColor">
+            </div>
+        </section>
+
+        <p>Adjust RGB Colors</p>
+
+        <section id="section7">
+            <div>
+                <span class="rgb">Red</span> <span id="redValue">134</span><br>
+                <input type="range" min="0" max="255" value="134" id="red" oninput="customizeColor()">
+            </div>
+            <div>
+                <span class="rgb">Green</span> <span id="greenValue">95</span><br>
+                <input type="range" min="0" max="255" value="95" id="green" oninput="customizeColor()">
+            </div>
+            <div>
+                <span class="rgb">Blue</span> <span id="blueValue">160</span><br>
+                <input type="range" min="0" max="255" value="160" id="blue" oninput="customizeColor()">
+            </div>
+        </section>
+
+        <section id="section8">
+            <div>
+                <p>Preset Colors</p>
+            </div>
+            <div id="presetColorParent"></div>
+        </section>
+
+        <section id="section9">
+            <div>
+                <p>Custom Colors</p>
+            </div>
+            <div id="customColorParent"></div>
+        </section>
+
+    </main>
+    <div id="message">Copied!</div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
